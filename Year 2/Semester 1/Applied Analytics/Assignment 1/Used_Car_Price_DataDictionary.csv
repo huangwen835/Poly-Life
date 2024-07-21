@@ -1,0 +1,19 @@
+﻿MAKE,Make of Car
+MODEL,Model of Car
+PRICE,Price of Car ($)
+YEAR,Year of Car
+KILOMETER,Mileage in KM
+FUEL TYPE,Fuel Type of Car
+TRANSMISSION,Transmission of Car
+COLOR,Color of Car
+OWNER,Type of Car Ownership
+SELLER TYPE,Type pf Car Seller
+ENGINE CAPACITY ,Engine Capacity in CC 
+MAX POWER,Max Power of Car
+MAX TORQUE,Max Torque of Car
+DRIVETRAIN,Type of  Drivetrain
+LENGTH,Length of Car
+WIDTH,Width of Car
+HEIGHT,Height of Car
+SEATING CAPACITY,Seating Capacity of Car
+FUEL TANK CAPACITY,Fuel Tank Capacity in Litres
