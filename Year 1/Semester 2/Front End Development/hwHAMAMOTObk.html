@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Booking Form</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/hwbootstrap.min.css" />
+    <script src="js/hwbootstrap.min.js"></script>
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/hwHAMAMOTObk.css" />
+    <script src="js/hwHAMAMOTObk.js" defer></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <button onclick="document.location= 'hwHAMAMOTOip.html'" class="button"><span>Home</span></button>
+                <form id="bookingform" onsubmit="submitForm(); return false">
+                    <h2>Reservation details</h2>
+                    <p class="main">
+                        <label>Adults:</label>
+                        <input id="aquantity" class="quatity" type="number" min=1 max=5 value=1>
+                        <span class="children">
+                            <label>Childen:</label>
+                            <input id="cquantity" class="quatity" type="number" min=0 max=5 value=0>
+                        </span>
+                        <br />
+                        <label for="iName">Name:</label>
+                        <input id="iName" name="Name" type="text" autocomplete="Name" required />
+                        <span class="tele">
+                            <label for="iTelephone">Phone: +65 </label>
+                            <input type="tel" id="iTelephone" name="Phone" size="8" pattern="[689]\d{7}" required />
+                        </span>
+
+                        <br />
+                        <label for="iEmail">Email:</label>
+                        <input type="email" id="iEmail" name="Email" size="30" placeholder="Enter email addresses" required />
+                        <br />
+
+                        <h2>Course Menu</h2>
+                        <select id="coursemenu" name="Course Menu" onchange="getcourse()" required>
+                            <option value="">Please select</option>
+                            <option value="1">HAMAMOTO LUNCH SGD280.00</option>
+                            <option value="2">HAMAMOTO CLASSIC SGD425.00</option>
+                            <option value="3">HAMAMOTO EXPERIENCE SGD550.00</option>
+                        </select>
+                    </p>
+                    <p id="datetime">
+                        <div class="main">
+                            <label for="iDate">Date:</label>
+                            <input type="date" id="iDate" name="Date" required />
+                            <span class="time">
+
+                                <label for="iTime">Time:</label>
+                                <select id="time" name="iTime" required>
+                                    <option value="">Please select</option>
+                                    <option value="1">12pm to 1pm</option>
+                                    <option value="2">1pm to 2pm</option>
+                                    <option value="3">2pm to 3pm</option>
+                                    <option value="4">6pm to 7pm</option>
+                                    <option value="5">7pm to 8pm</option>
+                                    <option value="6">8pm to 9pm</option>
+                                </select>
+                            </span>
+                            <br />
+                        </div>
+                    </p>
+                    <p>
+                        <input type="submit" id="lastbut">
+                        <input type="reset" id="lastbut" onclick="resetForm()" />
+                    </p>
+                    <p id="totalPrice"></p>
+                    <p id="finalMessage"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
